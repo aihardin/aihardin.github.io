@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">  
+  <channel>  
+    <title>Haplotypewriter</title>  
+    <description>A tangled bank of biology, computers, and Star Wars. More at [aaronhardin.com](http://aaronhardin.com)
+</description>  
+    <link>http://haplotypewriter.com/</link>  
+    <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
+    <pubDate>Sat, 17 Oct 2015 17:59:32 -0700</pubDate>  
+    <lastBuildDate>Sat, 17 Oct 2015 17:59:32 -0700</lastBuildDate>  
+    <generator>Jekyll v2.4.0</generator>  
+      
+    <item>  
+      <title>What is the likelihood I&#39;ll be on the Bay Bridge during an earthquake?</title>  
+      <description>&lt;p&gt;The earthquake early Sunday morning woke me and most of the Bay Area up wondering if a this was the Big One geologist have been warning about.  This quake on the West Napa fault was only 6.1 according to the &lt;a href=&quot;//earthquake.usgs.gov/earthquakes/eventpage/nc72282711#summary&quot;&gt;USGS&lt;/a&gt; but that is not the only fault in the area.  The big worry is the Hayward fault that runs behind my house, through the UC Berkeley Memorial Stadium, past Oakland, and goes down to Fremont.  This fault is pent up, overdue, and UC Davis geologist John Rundle gives 1:5 odds that it will release a 7.0 quake &lt;a href=&quot;http://www.sfexaminer.com/sanfrancisco/seismologists-say-bay-area-is-due-for-major-earthquake-that-could-cripple-region/Content?oid=2172405&quot;&gt;within the next few years&lt;/a&gt;. This is one reason that the Bay Bridge was replaced in 2013, the old structure was crippled in the 1989 quake and was unlikely to survive another serious shake.  &lt;/p&gt;
+
+&lt;p&gt;The new eastern span of the Bay Bridge is very pretty, cost $6.4 Billion, and has been plagued with safety concerns that I’m not qualified to judge.  However, I do cross it to get to work and every so often worry about being on it during a quake.  In order to answer the question of what are the chances I’ll be on it during a quake, I looked at my GPS logs that I’ve collected with the &lt;a href=&quot;http://theantimap.com/category/applications/antimap-log/&quot;&gt;Antimap&lt;/a&gt; iPhone &lt;a href=&quot;http://itunes.apple.com/app/antimap-log/id486524181&quot;&gt;app&lt;/a&gt;. This collects time points at a rate of 30 per second and was designed for sports use but I keep it running whenever I’m traveling. Since early 2014 I’ve been a postdoc at UCSF and have a log of every crossing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/Screen-Shot-2014-08-25-at-3.22.06-PM.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/Screen-Shot-2014-08-25-at-3.22.06-PM.png&quot; alt=&quot;Screen Shot 2014-08-25 at 3.22.06 PM&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the &lt;a href=&quot;https://github.com/tkrajina/gpxpy&quot;&gt;gpxpy&lt;/a&gt; python module I extracted all tracks from January to now that passed those the points on the map.  These correspond to the exit of the Treasure Island tunnel and the point that the Bay Bridge leaves the ground.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/segments.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/segments.png&quot; alt=&quot;segments&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So how long is each trip across the new bridge?  The mean time spent is 146 seconds, just over two minutes each way.  In total, I’ve spent 5.53 hours crossing that part of the bridge this year.  The logs span 5352 hours so I spend around 1/1000th of my time there. There is a 99.896% chance that I will NOT be on the eastern span at any given time.  Obviously the solution is to go faster across the bridge.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/time_on_bridge.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/08/time_on_bridge.png&quot; alt=&quot;time_on_bridge&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>  
+      <pubDate>Mon, 25 Aug 2014 15:55:28 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2014/08/25/bay-bridge-during-an-earthquake/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2014/08/25/bay-bridge-during-an-earthquake/</guid>  
+		                
+		              <category>antimap</category>  
+			            
+		              <category>bay bridge</category>  
+			            
+		              <category>earthquake</category>  
+			            
+		              <category>GIS</category>  
+			            
+		              <category>GPS</category>  
+			            
+		              <category>quantified self</category>  
+			            
+			        
+			      </item>  
+      
+    <item>  
+      <title>Getting sequencing metadata from NCBI SRA</title>  
+      <description>&lt;p&gt;The GEO page &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52386&quot;&gt;http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52386&lt;/a&gt; has a link to the SRA study ftp page which you can use to get all the sequencing reads with wget:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; wget -r ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP033/SRP033009/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After that, the fast-dump utility from the sra-toolkit can be used to convert the files to gripped fastq files, ready to be mapped with Bowtie, BWA, or other mappers.  However, the file names are uninformative!  Is SRR1029869.fastq.gz a sample of the brain or liver? Is this embryonic or postnatal?&lt;/p&gt;
+
+&lt;p&gt;To get the metadata for a study we can use the R package &lt;a href=&quot;http://www.bioconductor.org/packages/release/bioc/html/SRAdb.html&quot;&gt;SRAdb&lt;/a&gt;  and a bit of simple SQL.&lt;/p&gt;
+
+&lt;p&gt;Set up by installing SRAdb with Bioconductor and downloading the SRA metainfo database.  This is a large file &amp;gt; 7 GB so keep this in mind for download times and space on your computer.&lt;/p&gt;
+
+&lt;p&gt;[code language=”r”]
+source(“http://bioconductor.org/biocLite.R”)
+biocLite(“SRAdb”)
+library(SRAdb)
+sqlfile &amp;lt;- getSRAdbFile()
+sra_con &amp;lt;- dbConnect(SQLite(),sqlfile)
+[/code]&lt;/p&gt;
+
+&lt;p&gt;We can get information about each run by looking in the run table:
+[code language=”r”]run &amp;lt;- dbGetQuery(sra_con, “select * from run where run_accession = ‘SRR1029856’”)[/code]&lt;/p&gt;
+
+&lt;p&gt;[table id=1 /]&lt;/p&gt;
+
+&lt;p&gt;This doesn’t tell us very much but it does contain the crucial field that lets us know what experiment it came from: SRX377662.&lt;/p&gt;
+
+&lt;p&gt;Using this information, we can look in the experiment table with:&lt;/p&gt;
+
+&lt;p&gt;[code language=”r”]exp &amp;lt;- dbGetQuery(sra_con, “select * from experiment where experiment_accession = ‘SRX377662’”)[/code]&lt;/p&gt;
+
+&lt;p&gt;[table id=2 /]&lt;/p&gt;
+
+&lt;p&gt;This has the title info which we need to make sense of the data: what tissue and when it was collected.&lt;/p&gt;
+
+&lt;p&gt;Now we can use the power of SQL and get all the data at once by joining the run and experiment tables and only getting the rows that match the study ID.&lt;/p&gt;
+
+&lt;p&gt;[code language=”r”]runs &amp;lt;- dbGetQuery(sra_con, “select run_accession, title from run JOIN experiment USING (experiment_accession) where experiment.study_accession = ‘SRP033009’”)[/code]&lt;/p&gt;
+
+&lt;p&gt;[table id=3 /]&lt;/p&gt;
+</description>  
+      <pubDate>Tue, 05 Aug 2014 12:38:55 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2014/08/05/getting-sequencing-metadata-from-ncbi-sra/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2014/08/05/getting-sequencing-metadata-from-ncbi-sra/</guid>  
+		                
+		              <category>bioconductor</category>  
+			            
+		              <category>fastq</category>  
+			            
+		              <category>R</category>  
+			            
+		              <category>SRAdb</category>  
+			            
+			        
+			      <category>benchwork</category>  
+			        
+			      <category>bioinformatics</category>  
+			        
+			      </item>  
+      
+    <item>  
+      <title>Who spit in the ChIP-seq?</title>  
+      <description>&lt;p&gt;A while back in my previous lab, my officemate performed a ChIP experiment using fruit fly embryos. He was disappointed and surprised to see very little signal and started searching for where the experiment went wrong.  There were 95 million reads from the sequencer but when he looked at the reads that matched melanogaster, there were only 4 million! My friend took a handful of the contaminate reads and searched with BLAST to find that a good chunk came from a human genome.  Somewhere along the line, a whole bunch of human DNA got into his experiment.  Being a careful scientist he wanted to know if he made a mistake and contaminated his data so he gave me the reads and asked if I could figure out where the human DNA came from.&lt;/p&gt;
+
+&lt;p&gt;The first question I asked was how much of the contaminating DNA is human.  63.5 million reads matched the human reference genome resulting in information on 701 Mb of the genome and only 0.1% of the genome covered with more than 15 reads.  This level of sequencing is not enough to clearly answer an important follow up question: did one person contaminate the sample or many?  An approximation can be made by using the  mitochondria was sequenced to 1500x (off the charts below).  Looking at the mitochondrial variants, that I’m not revealing for privacy reasons, showed that there was only one haplotype.  This doesn’t really rule more than one person out but it supports a single contaminator.&lt;/p&gt;
+
+&lt;h1 id=&quot;male-or-female&quot;&gt;Male or Female?&lt;/h1&gt;
+
+&lt;p&gt;If my colleague contaminated the sample, then there should be Y chromosome DNA and half as much X chromosome DNA compared to the autosomes.  The Y chromosome is very degenerated and full of repetitive DNA so we need to filter out all reads that also map to other chromosomes.  Once those are thrown out, there are 7454 reads that mapped the the 59Mb Y chromosome.  Visual inspection of these remaining reads shows that they often have insertions/deletions in the mapping and are suspect.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/coverage.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/coverage.png&quot; alt=&quot;coverage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The relative coverage of the X chromosome is with same range of the autosomes, suggesting whoever contaminated the sample is  XX and not XY.&lt;/p&gt;
+
+&lt;h1 id=&quot;not-my-officemate-but-who&quot;&gt;Not my officemate but who?&lt;/h1&gt;
+
+&lt;p&gt;The next person to process the sample was our extremely proficient technician who is normally beyond suspicion but is female along with the rest of the people who process the sample at our sequencing core.  They all fit the genetic profile so far which meant I needed to dig a bit deeper.  To do this I used the &lt;a href=&quot;http://www.hagsc.org/hgdp/&quot;&gt;Human Genetic Diversity Project&lt;/a&gt;, a collection of polymorphism collected from specific populations across the world.  Each population was genotyped at 600,000 positions and I looked at the polymorphisms in the contaminate to see which population it matched the best.  After I did this by hand, a great tool called &lt;a href=&quot;http://genome.sph.umich.edu/wiki/LASER&quot;&gt;LASER&lt;/a&gt; has been released to make this a one step analysis.  Plotting the Unknown along with the HGDP samples shows that it clusters nicely in the Central/South Asian group, ruling out our tech and maintaining her spotless record.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png&quot; alt=&quot;HGDP_pca-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I could show a whole lot more information about this person but won’t because I don’t know who it is and I don’t have consent.  I guess I could try to do a &lt;a href=&quot;http://strangervisions.com/&quot;&gt;facial reconstruction&lt;/a&gt;. I purposely did not look at any health related SNPs. I was even a bit worried that the ratio of X/Y/autosome could reveal something invasive like &lt;a href=&quot;http://en.wikipedia.org/wiki/Klinefelter_syndrome&quot;&gt;Klinefelter syndrome&lt;/a&gt;. At the end of the day, I really wouldn’t be able to say much about this person’s health risk but I can say quite about about her ancestry and so could anyone else who got their hands on a DNA sample.&lt;/p&gt;
+</description>  
+      <pubDate>Mon, 05 May 2014 17:22:25 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2014/05/05/who-spit-in-the-chip-seq/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2014/05/05/who-spit-in-the-chip-seq/</guid>  
+		                
+		              <category>contamination</category>  
+			            
+		              <category>human genomes</category>  
+			            
+		              <category>LASER</category>  
+			            
+		              <category>PCA</category>  
+			            
+			        
+			      <category>algorithms</category>  
+			        
+			      <category>benchwork</category>  
+			        
+			      </item>  
+      
+    <item>  
+      <title>Two by Two</title>  
+      <description>&lt;p&gt;What makes up the mass of a tree? Everyone learns about photosynthesis multiple times in school and yet when MIT and Harvard undergrads were questioned upon graduation “Where does the mass that makes up a tree come from?”, only a few knew the correct answer&lt;a href=&quot;http://www.learner.org/resources/series26.html&quot;&gt; http://www.learner.org/resources/series26.html&lt;/a&gt;.  Many said sunlight, soil, minerals, oxygen, and water, which are of course involved but most failed to make the connection that carbon dioxide in the air is transformed into 95% of the tree’s mass. People know that plants need sunlight and air and that they make their own food but don’t make the jump to put these pieces of information together and answer this fundamental question. Given this abysmal track record, it is not surprising that when most people are given facts about mutation rates and nuclear decay they fail to understand that these facts have a fundamental impact of the question, where do species come from? In particular, given a mutation rate and an amount of mutations in a population, how long ago did the population share a common ancestor?&lt;/p&gt;
+
+&lt;p&gt;Let’s try a few observed differences: If the mutation rate for an organism with a 3 billion nucleotide genome is 2 mutations per 100 million bases per generation and there are zero differences between two individuals then they are clones.  If there are 60 differences between the genomes of two individuals then they must only be one generation apart.  If there are 120 differences, then they must be two generations apart.  There are a few models that fit this observation: there could be two serial generations apart, grandparent and grandchild, or two parallel generations, they share a common parent.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/mutations-01.png&quot; alt=&quot;mutations-01&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Following some very basic assumptions we can measure how distantly related two individuals are just from counting the number of differences in their genomes.  The more differences, the more generations between them.  If we are sampling individuals from the same generation then we can rule out serial generations and know that we are measuring how long ago they shared a common ancestor. When the size of a population gets to be very very small, the amount of genetic diversity also becomes very small.  There are just less individuals to carry diversity to begin with.  We see this with crop species all the time and it becomes an important consideration when maintaining the genetic health of a population.  Cultivated bananas are clones and from the 1920s -60s, the primary strain &lt;a href=&quot;http://en.wikipedia.org/wiki/Gros_Michel&quot;&gt;http://en.wikipedia.org/wiki/Gros_Michel &lt;/a&gt;was wiped out by a fungus.  A population bottleneck will decrease the amount of diversity and leave a dramatic signature of the population that will persist for many many generations. This is one reason that the measurements that follow are of effective population size in terms of genetic diversity.  The actual number of individuals is going to be larger, usually much larger.&lt;/p&gt;
+
+&lt;p&gt;In 2011 Heng Li and Richard Durbin took a single human genome containing a chromosome from each parent and looked are all the places where there are differences between them.  Parts that have fewer differences had a common ancestor more recently than those with more differences.  By scanning across the genome and by noting that because of recombination, different parts of a genome have a different history, they found that the model of the past that best fit the observed data.  Of course, they tested the model with simulations and found that the method of a pairwise sequentially Markovian coalescent (PSMC) recovered the true simulated history.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png&quot; alt=&quot;psmc_simulation&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now looking at several sequenced humans and using this same method they confirmed  the out of Africa bottleneck of European and Asian populations.  In this plot, the present is on the left and goes into the past on the right. At no point does the human population go down to Noah, Wife, three daughter-in-laws (10 chromosomes).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png&quot; alt=&quot;humans&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe humans are weird and somehow misbehave in this model.  Let’s look at the crawling creatures and the birds of the air.  Many animals have been sequenced and if the population was reduced to two pairs (4 chromosomes) then maybe they will show this signature. The pig is the classic unclean animal and there should only have been two on board.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png&quot; alt=&quot;pig-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The lowest the effective pig population ever sank is around 250 individuals.  How about birds?  Here is the history of the falcons:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png&quot; alt=&quot;falcons-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nope, only went down to 1,500 ish.&lt;/p&gt;
+
+&lt;p&gt;The Chimps, Bonobos, Gorillas, and Orangutans that should have been on the Ark:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png&quot; alt=&quot;chimps-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png&quot; alt=&quot;gorillas-01&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png&quot; alt=&quot;ourangutangs-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Other primates:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png&quot; alt=&quot;tibet_macaque-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Man’s best friend et al:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png&quot; alt=&quot;canids&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Panda (hope Noah had enough of the single species of bamboo they ate):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png&quot; alt=&quot;pandas-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lions and Tigers:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png&quot; alt=&quot;lions_and_tigers-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;How about the reptiles:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png&quot; alt=&quot;alligator&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Not a single species underwent a severe bottleneck 5-10 thousand years ago.  Even if the dates were wrong, all these species did not experience a bottleneck at the same time. If the tale of Noah’s Ark were true, it should be etched in the genomes of the animals on the boat and it isn’t.&lt;/p&gt;
+
+&lt;p&gt;Sources:&lt;/p&gt;
+
+&lt;p&gt;Humans: &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3154645/&quot;&gt;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3154645/&lt;/a&gt;
+Great Apes: &lt;a href=&quot;http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12228.html?WT.ec_id=NATURE-20130704&quot;&gt;http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12228.html?WT.ec_id=NATURE-20130704&lt;/a&gt;
+Tibetan Macaque &lt;a href=&quot;http://mbe.oxfordjournals.org/content/early/2014/03/18/molbev.msu104.full.pdf+html&quot;&gt;http://mbe.oxfordjournals.org/content/early/2014/03/18/molbev.msu104.full.pdf+html&lt;/a&gt;
+Malaysian Macaque:&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3491380/&quot;&gt; http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3491380/&lt;/a&gt;
+Pandas:&lt;a href=&quot;http://www.nature.com/ng/journal/v45/n1/full/ng.2494.html?WT.ec_id=NG-201301&quot;&gt; http://www.nature.com/ng/journal/v45/n1/full/ng.2494.html?WT.ec_id=NG-201301&lt;/a&gt;
+Pigs:&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/23151582&quot;&gt; http://www.ncbi.nlm.nih.gov/pubmed/23151582&lt;/a&gt;
+Lions and Snow Leopards: &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3778509/#!po=89.2857&quot;&gt;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3778509/#!po=89.2857&lt;/a&gt;
+canids: &lt;a href=&quot;http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1004016&quot;&gt;http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1004016&lt;/a&gt;
+Chickens, Alligators, Anolis: &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3760627/#!po=34.0909&quot;&gt;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3760627/#!po=34.0909&lt;/a&gt;
+Falcons:&lt;a href=&quot;http://www.nature.com/ng/journal/v45/n5/full/ng.2588.html&quot;&gt; http://www.nature.com/ng/journal/v45/n5/full/ng.2588.html&lt;/a&gt;&lt;/p&gt;
+</description>  
+      <pubDate>Mon, 31 Mar 2014 19:27:05 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2014/03/31/two-by-two/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2014/03/31/two-by-two/</guid>  
+		                
+		              <category>evidence</category>  
+			            
+		              <category>history</category>  
+			            
+		              <category>population genetics</category>  
+			            
+		              <category>PSMC</category>  
+			            
+			        
+			      <category>research blogging</category>  
+			        
+			      </item>  
+      
+    <item>  
+      <title>Making an organism out of a genome with python</title>  
+      <description>&lt;p&gt;Genomes are long strands of nucleic acids consisting of the instruction guide for the assembly of an organism. Once sequencing projects are completed we conceptualize genome as strings of text for convenience instead of huge chemical diagrams. There are really powerful techniques that researchers can use to manipulate and study these long strings of ‘ATGC’ but sometimes I feel like these abstractions lose a bit of the linkage of the genome to the organism that it came from.  If I was given a file named GRCh37.p13.fasta and nothing else, it would take a bit of work just to figure out that this is from a human.&lt;/p&gt;
+
+&lt;p&gt;How can we identify an organism just by looking at the sequence?  I don’t know of a method but one you know what it is, how can you use it to represent the organism? One cool way from Peter Cock at &lt;a href=&quot;http://blastedbio.blogspot.com/2013/08/pixelated-potato-posters-in-python.html&quot;&gt;blastedbio&lt;/a&gt; is to turn a bit of the genome into a pixelated picture of the organism.  The conceptual steps are to take the colors from a region of a picture and write a letter from the genome in that color. He used it for making pictures of the potato genome but anyone can take their favorite genome sequenced organism and do the same thing!  Peter wrote this so that the output is a series of pdfs of various sizes for your poster making needs. For convenience, I’ve made his script a bit more general and posted it here:&lt;a href=&quot;https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py&quot;&gt; https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py &lt;/a&gt; To use this, first make sure you have BioPython, numpy, Python Image Library and reportlab installed.  Then get a &lt;a href=&quot;http://en.wikipedia.org/wiki/File:Drosophila_melanogaster_-_side_(aka).jpg&quot;&gt;picture&lt;/a&gt; from wikipedia and a &lt;a href=&quot;ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r5.52.fasta.gz&quot;&gt;genome&lt;/a&gt; from flybase and run it like so:
+python &lt;a href=&quot;https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py&quot;&gt;dither_rbg.py&lt;/a&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/File:Drosophila_melanogaster_-_side_(aka).jpg&quot;&gt;dmel_wiki.jpg&lt;/a&gt; &lt;a href=&quot;ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r5.52.fasta.gz&quot;&gt;dm3.fasta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/dmel_wiki_bg_A0.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/dmel_wiki_bg_A0.png&quot; alt=&quot;dmel_wiki_bg_A0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve resized this image so it is a reasonable size for my hosting limits. A side effect is that the individual characters are no longer visible and it looks more like the original image.  While this is a cool compression artifact, it loses the intent of the program. Here is a sample of the full size image: &lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/close_up_atcg.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/close_up_atcg.png&quot; alt=&quot;close_up_atcg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;While one fly is awesome, I enjoy the evolutionary perspective and using these fantastic &lt;a href=&quot;http://flybase.org/static_pages/anatomy/Drosophilidae/Drosophilidae.html&quot;&gt;illustrations&lt;/a&gt; by Mrs. Sarah L. Martin provided by FlyBase and this &lt;a href=&quot;http://bergmanlab.smith.man.ac.uk/?p=1612&quot;&gt;list&lt;/a&gt; of sequenced Drosophilids curated by Casey Bergman, I created pictures of all available fly genomes below.  Warning, these are rather large PDFs so don’t open in your browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_ananassae_A0.pdf&quot;&gt;Drosophila_ananassae_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_bipunctata_A0.pdf&quot;&gt;Drosophila_bipunctata_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_mojavensis_A0.pdf&quot;&gt;Drosophila_mojavensis_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_melanogaster_A0.pdf&quot;&gt;Drosophila_melanogaster_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_pseudoobscura_A0.pdf&quot;&gt;Drosophila_pseudoobscura_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_virilis_A0.pdf&quot;&gt;Drosophila_virilis_A0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_willistoni_A0.pdf&quot;&gt;Drosophila_willistoni_A0&lt;/a&gt;&lt;/p&gt;
+</description>  
+      <pubDate>Tue, 27 Aug 2013 16:11:48 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2013/08/27/making-an-organism-out-of-a-genome-with-python/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2013/08/27/making-an-organism-out-of-a-genome-with-python/</guid>  
+		                
+		              <category>drosophila</category>  
+			            
+		              <category>python</category>  
+			            
+			        
+			      </item>  
+      
+    <item>  
+      <title>The melanogaster iceberg</title>  
+      <description>&lt;p&gt;One thing that I like about studying fruit flies is that as a species, they share a similar history with humans.  Both &lt;em&gt;D. melanogaster&lt;/em&gt; and &lt;em&gt;H. sapiens&lt;/em&gt; diverged from their common ancestors while in Africa and have since undergone a population explosion and spread across the world within tens of thousands of years ago.  I don’t know how many other species share this pattern but I would guess that anything that lives off of human byproducts is similar: mice, rats, lice.&lt;/p&gt;
+
+&lt;p&gt;In the past, fruit flies have taught us many things about genetic mechanisms starting with the first link of chromosomes to genetics in the pioneering work of Thomas Hunt Morgan in the early 1900s.  Once DNA was understood and scientists were able to read the bases, fruit flies were the first organisms to have a gene sequenced at a global scale (eleven samples but a huge amount of work at the time).  This trend of a model organism informing us on the natural processes that we expect to be occurring in humans has been immensely useful. Viruses, bacteria, yeast, fruit flies and a plant all had their genomes sequenced before a human sequence was finished. However, once DNA sequencing and other technologies became cheap enough, scientists spent a huge amount of time and money to characterize the amount of human genetic diversity. First by interrogating diversity at specific nucleotides with microarrays with the HapMap Project and then supplementing with whole genome sequencing in the 1000 Genomes Project we quickly amassed more data on humans than any other species.  Now the trend has flipped and we can apply information we have gathered on &lt;em&gt;H. sapiens&lt;/em&gt; to &lt;em&gt;D. melanogaster&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;One example of a modern human study that supasses anything done in flies is the joint &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22604722&quot;&gt;work&lt;/a&gt; of the &lt;a href=&quot;http://jnpopgen.org/&quot;&gt;Novembre&lt;/a&gt; lab, then at UCLA now at U of Chicago, and the pharmaceutical company GlaxoSmithKline in sequencing 202 genes from 14,002 people.  I’m not sure what the maximum gene sequencing depth we have on &lt;em&gt;D. melanogaster&lt;/em&gt; but it is nothing close to 14,000.  Maybe a thousand? In any case, the reason that this data set is interesting is that we do not know how much genetic diversity is in the human or fly population.  We do know that both populations are growing at enormous speed historically speaking and based on that fact we can predict there will be a large amount of new and rare variants in the population.  This follows from realizing that each new individual inherits variants from their parents and also through various mechanisms, creates new mutations in their genomes.  In an expanding population, most people will not have had time for their new alleles to spread and will therefore be rare.  These rare alleles are potentially very relevant to human health since purifying selection has not had time to purge them from the population.  The idea that these new deleterious mutations increases the &lt;em&gt;average&lt;/em&gt; genetic burden has been &lt;a href=&quot;http://haldanessieve.org/2013/05/10/the-deleterious-mutation-load-is-insensitive-to-recent-population-history/&quot;&gt;challenged&lt;/a&gt; recently by Jonathan Pritchard and Guy Sella’s labs but the total number of deleterious alleles in the population still goes up.&lt;/p&gt;
+
+&lt;p&gt;Using exon capture methods followed by high throughput sequencing, the Novembre lab were able to find alleles that were present at frequencies as low as 0.007%.  I attended a presentation Novembre gave about this work and he described Fig 1B as an “iceberg plot” meaning that the previous studies only saw the tip of human genetic variation.&lt;/p&gt;
+
+&lt;p&gt;[caption id=”” align=”alignleft” width=”1491”]&lt;img src=&quot;http://newsroom.ucla.edu/portal/ucla/artwork/3/4/0/7/4/234074/John_Novembre_2012_iceberg_image.jpg&quot; alt=&quot;&quot; /&gt; The human genetic variation iceberg. Variants that could be found in samples with up to 200 individuals shown on top and everything else below.[/caption]&lt;/p&gt;
+
+&lt;p&gt;The rest of their analysis goes on the show that the rarest of variants are more likely to be damaging and that the iceberg goes down even farther than this, particularly in the African populations.&lt;/p&gt;
+
+&lt;p&gt;I’m quite curious if this same pattern exists in the global &lt;em&gt;D. melanogaster&lt;/em&gt; population.  I don’t have 14 thousand flies to sequence but I do have the genomes from the &lt;a href=&quot;http://dgrp.gnets.ncsu.edu/&quot;&gt;Drosophila Genetic Reference Panel&lt;/a&gt;, the &lt;a href=&quot;http://www.dpgp.org/dpgp2/DPGP2.html&quot;&gt;Drosophila Population Genomics Project&lt;/a&gt; and some &lt;a href=&quot;http://bergmanlab.smith.man.ac.uk/?p=1685&quot;&gt;prerelease&lt;/a&gt; genomes from Casey Bergman and Penny Haddrill for some 325 fully sequenced genomes.  Baring line mixups and all kinds of mistakes I could have made, #overlyhonestmethods, I should be able to see some excess of rare variants since the DPGP genomes are mainly African and have higher diversity. I’m not going to make as fancy of a figure as Novembre did since this is also an exercise in learning D3.&lt;/p&gt;
+
+&lt;p&gt;Method: align all raw sequence data to the reference genome with BWA/Stampy.  Realign mapped reads and call variants with GATK.  Recalibrate the variant quality with snps called from four DGRP genomes resequenced to 50x coverage on a HighSeq by me (well, really resequenced by the lab’s awesome and talented tech who wishes to remain behind the scenes for now). Filter out false positives and non-biallelic snps. The second filter is going to decrease the number of rare alleles found but this is quick and dirty and it makes the partitioning easy. Then use GATK and bedtools to find how many segregating sites are in each exon:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java -jar ~/bin/GenomeAnalysisTK-2-latest/GenomeAnalysisTK.jar -R ~/data/genome/dm3.fasta -T SelectVariants --variant global_snps.recalibrated.sep.pass.vcf.gz --restrictAllelesTo BIALLELIC -select &quot;AF &amp;gt;= 0.005&quot; --logging_level ERROR|bedtools intersect -sorted -a ~/data/annotation/dmel_gene.gff -b stdin -c &amp;gt; all_highfreq_gene_counts.bed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A bit of python to turn the bedtools outputs into a proper GFF file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;low_fh = file(&#39;all_lowfreq_gene_counts.bed&#39;)
+high_fh = file(&#39;all_highfreq_gene_counts.bed&#39;)
+out_fh = file(&#39;all_gene_mut_counts.bed&#39;,&#39;w&#39;)
+out_fh.write(&#39;##gff-version 3\n&#39;)
+for line in high_fh:
+    low_counts = low_fh.readline().strip().split(&#39;\t&#39;)[-1]
+    exon_data = line.strip().split(&#39;\t&#39;)[:-1]
+    high_counts = line.strip().split(&#39;\t&#39;)[-1]
+    exon_data[-1] = exon_data[-1]+&#39;;high_count=%s;low_count=%s&#39;%(high_counts,low_counts)
+    out_fh.write(&#39;\t&#39;.join(exon_data)+&#39;\n&#39;)
+out_fh.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And some more to process the GFF and get counts:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;input_bed = file(&#39;all_gene_mut_counts.bed&#39;)
+exons = {}
+for line in input_bed:
+    if line.startswith(&#39;##&#39;): continue
+    try:
+        annotation = line.rstrip().split(&#39;\t&#39;)[-1].split(&#39;;&#39;)
+        annotation = dict([tuple(a.split(&#39;=&#39;)) for a in annotation if &#39;=&#39; in a]) #skips the flag values but don&#39;t need them
+    except ValueError:
+        print line, annotation
+#print annotation
+exons[annotation[&#39;ID&#39;]] = (int(annotation[&#39;high_count&#39;]),int(annotation[&#39;low_count&#39;]))
+mut_counts = zeros((3,len(exons)))
+
+for i,exon in enumerate(exons):
+    mut_counts[0][i] = exons[exon][0]
+    mut_counts[1][i] = exons[exon][1]
+mut_counts[2]=mut_counts[0]+mut_counts[1]
+mut_counts.sort(axis=1)
+out_fh = file(&#39;data.js&#39;,&#39;w&#39;)
+out_fh.write(&#39;var high_freq = [&#39;+&#39;,&#39;.join(map(str,mut_counts[0][-200:]))+&#39;]\n&#39;)
+out_fh.write(&#39;var low_freq = [&#39;+&#39;,&#39;.join(map(str,mut_counts[1][-200:]))+&#39;]\n&#39;)
+out_fh.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven’t used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:&lt;/p&gt;
+
+&lt;p&gt;We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I’m sure that with more genome sequences the_ D. melanogaster_ plot will look more like the &lt;em&gt;H. sapiens&lt;/em&gt;. Other projects are in the works to describe genetic variation in other model organisms such as the plant &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Arabidopsis_thaliana&quot;&gt;Arabidopsis thaliana&lt;/a&gt;&lt;/em&gt; and the worm &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Caenorhabditis_elegans&quot;&gt;Caenorhabditis elegans&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In working through coding and presenting the D3, I leaned heavily on the D3 tutorial by &lt;a href=&quot;http://alignedleft.com/tutorials/d3/&quot;&gt;Scott Murray&lt;/a&gt; and the tips of &lt;a href=&quot;http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/&quot;&gt;Charles Reid&lt;/a&gt;.&lt;/p&gt;
+</description>  
+      <pubDate>Thu, 20 Jun 2013 11:52:59 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2013/06/20/the-melanogaster-iceberg/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2013/06/20/the-melanogaster-iceberg/</guid>  
+		                
+		              <category>1KG</category>  
+			            
+		              <category>allele frequency</category>  
+			            
+		              <category>d3</category>  
+			            
+		              <category>DGRP</category>  
+			            
+		              <category>DPGP2</category>  
+			            
+		              <category>javascript</category>  
+			            
+			        
+			      <category>research blogging</category>  
+			        
+			      </item>  
+      
+    <item>  
+      <title>How to grow massive amounts of fruit flies</title>  
+      <description>&lt;p&gt;As we perpetuate the fruit fly circle of life, we need to start somewhere and I’m going to assume you already have some large amounts of egg laying flies in a population cage. These population cages are usually fed with yeast paste on some kind of sweet agar (molasses, apple juice, grape juice).  Take the trays from the previous night’s feeding and gently wash the embryos into a double layer sieve so that the adult flies get stuck on the first layer and the embryos stay on the second.  A boar hair paintbrush can be used to make sure all the embryos are recovered from the tray.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/collection_plates-225x300.jpg&quot; alt=&quot;collection_plates&quot; /&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/washed_plate-225x300.jpg&quot; alt=&quot;washed_plate&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From here there are two ways to proceed: put the embryos in a box with yeast paste or put the embryos in bottles with banana paste and yeast.  My fly strains didn’t do so well in the box so I’m going to show the bottle method.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/collected_embryos.jpg&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/collected_embryos-225x300.jpg&quot; alt=&quot;collected_embryos&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To get an optimum number of flies in the next generation, around 120-150ml, you will need between 3-5 large trays of bottles with 40 bottles per tray.  In each bottle tap a small amount of yeast.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/empty_bottles.jpg&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/empty_bottles-225x300.jpg&quot; alt=&quot;empty_bottles&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now using a nickel spatula, scrape up a pile of embryos no bigger than a grain of rice.  Not those basmati rice grains, more like jasmine rice.  Half of a fat sushi rice gain. I like to tap the yeast onto one side and the embryos onto the other so that the yeast doesn’t dehydrate the embryos.  I don’t know if that would really happen but it also helps to find the embryo pile when it isn’t blending into the yeast.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/seeded_bottles.jpg&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/seeded_bottles-225x300.jpg&quot; alt=&quot;seeded_bottles&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/mound_of_eggs-300x225.jpg&quot; alt=&quot;mound_of_eggs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have put the embryos into the full tray of bottles, plug them up, move to your incubator, and wait around 8-10 days.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/incubator-225x300.jpg&quot; alt=&quot;incubator&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is hard to estimate the correct amount of embryos to put in each bottle.  Too many and the larvae will be stressed, develop slower, and churn up the media so that it is goopy.  Goopy bottles are really hard to tap the adults out of so don’t do that.  On the other side, underpopulated bottles waste bottles since you need more of them.  One tray of full but not too full bottles will yield around 50 ml of adult flies.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/ready_bottle-300x225.jpg&quot; alt=&quot;ready_bottle&quot; /&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/dense_bottle-225x300.jpg&quot; alt=&quot;dense_bottle&quot; /&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/sparce_bottle-225x300.jpg&quot; alt=&quot;sparce_bottle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To collect the adult flies, I use a 200 ml flask and place it in an ice bucket with a bit of ice.  I don’t pack the ice around the flack, it can be loose.  The ice will keep the flies from trying to escape.  Place a large funnel in the flask and tap each bottle into the flask. Be gentle with the flies in the flask and don’t shake them too much as you tap.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/flask-225x300.jpg&quot; alt=&quot;flask&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have 120-150 ml of adult flies, dump them into your prepared population cage and get ready to do this again in a week!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/empty_pop_cage-225x300.jpg&quot; alt=&quot;empty_pop_cage&quot; /&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/full_pop_cage-225x300.jpg&quot; alt=&quot;full_pop_cage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bottles and plugs can be purchased from &lt;a href=&quot;http://www.flystuff.com/bottles.php&quot;&gt;FlyStuff&lt;/a&gt;, and the cages as well.  I cut out the middleman for the population cages and bought acrylic tube from our local plastic supplier &lt;a href=&quot;http://www.tapplastics.com/product/plastics/plastic_rods_tubes_shapes/clear_cast_acrylic_tubing/462&quot;&gt;TapPlastics&lt;/a&gt;.&lt;/p&gt;
+</description>  
+      <pubDate>Wed, 29 May 2013 14:54:15 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2013/05/29/how-to-grow-massive-amounts-of-fruit-flies/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2013/05/29/how-to-grow-massive-amounts-of-fruit-flies/</guid>  
+		                
+		              <category>melanogaster</category>  
+			            
+			        
+			      <category>benchwork</category>  
+			        
+			      </item>  
+      
+    </channel>  
+</rss> 

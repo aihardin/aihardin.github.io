@@ -1,0 +1,17 @@
+# Site settings
+title: Haplotypewriter
+email: aaron.hardin@ucsf.edu
+description: > # this means to ignore newlines until "baseurl:"
+ A tangled bank of biology, computers, and Star Wars.
+ More at [aaronhardin.com](http://aaronhardin.com)
+baseurl: ""
+url: "http://haplotypewriter.com"
+twitter_username: aihardin
+github_username: aihardin
+
+# Build settings
+markdown: kramdown
+#markdown: redcarpet # Does not make multiline ``` ... ``` work!
+paginate: 5
+#excerpt_separator: <!--more--> # Has problems with hyperlinks in the excerpt
+permalink: /:year/:month/:day/:title/
