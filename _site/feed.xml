@@ -6,8 +6,8 @@
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Mon, 18 Apr 2016 22:56:55 -0700</pubDate>  
-    <lastBuildDate>Mon, 18 Apr 2016 22:56:55 -0700</lastBuildDate>  
+    <pubDate>Tue, 19 Apr 2016 13:21:51 -0700</pubDate>  
+    <lastBuildDate>Tue, 19 Apr 2016 13:21:51 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
       
     <item>  
@@ -206,7 +206,7 @@ sra_con &amp;lt;- dbConnect(SQLite(),sqlfile)
 
 &lt;p&gt;Lions and Tigers:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/lions_and_tigers-011.png&quot; alt=&quot;lions_and_tigers-01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/lions_and_tigers-01.png&quot; alt=&quot;lions_and_tigers-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;How about the reptiles:&lt;/p&gt;
 
