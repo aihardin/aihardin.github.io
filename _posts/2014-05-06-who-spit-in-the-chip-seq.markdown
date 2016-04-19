@@ -26,7 +26,7 @@ The first question I asked was how much of the contaminating DNA is human.  63.
 
 If my colleague contaminated the sample, then there should be Y chromosome DNA and half as much X chromosome DNA compared to the autosomes.  The Y chromosome is very degenerated and full of repetitive DNA so we need to filter out all reads that also map to other chromosomes.  Once those are thrown out, there are 7454 reads that mapped the the 59Mb Y chromosome.  Visual inspection of these remaining reads shows that they often have insertions/deletions in the mapping and are suspect.
 
-![coverage]({{ site.url }}/assets/coverage.jpg)
+![coverage]({{ site.url }}/assets/coverage.png)
 
 The relative coverage of the X chromosome is with same range of the autosomes, suggesting whoever contaminated the sample is  XX and not XY.
 

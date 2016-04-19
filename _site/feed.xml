@@ -2,13 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">  
   <channel>  
     <title>Haplotypewriter</title>  
-    <description>A tangled bank of biology, computers, and Star Wars. More at [aaronhardin.com](http://aaronhardin.com)
+    <description>A tangled bank of biology, computers, and Star Wars. More at aaronhardin.com
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Sat, 17 Oct 2015 17:59:32 -0700</pubDate>  
-    <lastBuildDate>Sat, 17 Oct 2015 17:59:32 -0700</lastBuildDate>  
+    <pubDate>Mon, 18 Apr 2016 22:00:10 -0700</pubDate>  
+    <lastBuildDate>Mon, 18 Apr 2016 22:00:10 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
+      
+    <item>  
+      <title>Trying GitHub</title>  
+      <description>&lt;p&gt;I’m trying to get GitHub to serve my pages. This is a test and I’m past the Balmer peak.&lt;/p&gt;
+</description>  
+      <pubDate>Sat, 17 Oct 2015 00:00:00 -0700</pubDate>  
+              <link>http://haplotypewriter.com/2015/10/17/trying-github/</link>  
+	              <guid isPermaLink="true">http://haplotypewriter.com/2015/10/17/trying-github/</guid>  
+		                
+			        
+			      </item>  
       
     <item>  
       <title>What is the likelihood I&#39;ll be on the Bay Bridge during an earthquake?</title>  
@@ -116,7 +127,7 @@ sra_con &amp;lt;- dbConnect(SQLite(),sqlfile)
 
 &lt;p&gt;If my colleague contaminated the sample, then there should be Y chromosome DNA and half as much X chromosome DNA compared to the autosomes.  The Y chromosome is very degenerated and full of repetitive DNA so we need to filter out all reads that also map to other chromosomes.  Once those are thrown out, there are 7454 reads that mapped the the 59Mb Y chromosome.  Visual inspection of these remaining reads shows that they often have insertions/deletions in the mapping and are suspect.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/coverage.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/coverage.png&quot; alt=&quot;coverage&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/coverage.png&quot; alt=&quot;coverage&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The relative coverage of the X chromosome is with same range of the autosomes, suggesting whoever contaminated the sample is  XX and not XY.&lt;/p&gt;
 
