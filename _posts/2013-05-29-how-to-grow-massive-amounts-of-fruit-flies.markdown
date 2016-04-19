@@ -14,7 +14,7 @@ tags:
 
 As we perpetuate the fruit fly circle of life, we need to start somewhere and I'm going to assume you already have some large amounts of egg laying flies in a population cage. These population cages are usually fed with yeast paste on some kind of sweet agar (molasses, apple juice, grape juice).  Take the trays from the previous night's feeding and gently wash the embryos into a double layer sieve so that the adult flies get stuck on the first layer and the embryos stay on the second.  A boar hair paintbrush can be used to make sure all the embryos are recovered from the tray.
 
-![collection_plates](http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/collection_plates-225x300.jpg)![washed_plate](http://www.haplotypewriter.com/blog/wp-content/uploads/2013/05/washed_plate-225x300.jpg)
+![collection_plates]({{ site.url }}/assets/collection_plates.JPG)![washed_plate]({{ site.url }}/assets/washed_plate.JPG)
 
 From here there are two ways to proceed: put the embryos in a box with yeast paste or put the embryos in bottles with banana paste and yeast.  My fly strains didn't do so well in the box so I'm going to show the bottle method.
 
