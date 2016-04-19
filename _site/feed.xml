@@ -6,8 +6,8 @@
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Mon, 18 Apr 2016 22:12:33 -0700</pubDate>  
-    <lastBuildDate>Mon, 18 Apr 2016 22:12:33 -0700</lastBuildDate>  
+    <pubDate>Mon, 18 Apr 2016 22:25:00 -0700</pubDate>  
+    <lastBuildDate>Mon, 18 Apr 2016 22:25:00 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
       
     <item>  
@@ -251,25 +251,25 @@ Falcons:&lt;a href=&quot;http://www.nature.com/ng/journal/v45/n5/full/ng.2588.ht
 &lt;p&gt;How can we identify an organism just by looking at the sequence?  I don’t know of a method but one you know what it is, how can you use it to represent the organism? One cool way from Peter Cock at &lt;a href=&quot;http://blastedbio.blogspot.com/2013/08/pixelated-potato-posters-in-python.html&quot;&gt;blastedbio&lt;/a&gt; is to turn a bit of the genome into a pixelated picture of the organism.  The conceptual steps are to take the colors from a region of a picture and write a letter from the genome in that color. He used it for making pictures of the potato genome but anyone can take their favorite genome sequenced organism and do the same thing!  Peter wrote this so that the output is a series of pdfs of various sizes for your poster making needs. For convenience, I’ve made his script a bit more general and posted it here:&lt;a href=&quot;https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py&quot;&gt; https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py &lt;/a&gt; To use this, first make sure you have BioPython, numpy, Python Image Library and reportlab installed.  Then get a &lt;a href=&quot;http://en.wikipedia.org/wiki/File:Drosophila_melanogaster_-_side_(aka).jpg&quot;&gt;picture&lt;/a&gt; from wikipedia and a &lt;a href=&quot;ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r5.52.fasta.gz&quot;&gt;genome&lt;/a&gt; from flybase and run it like so:
 python &lt;a href=&quot;https://github.com/aihardin/picobio/blob/master/acgt_dither/dither_rgb.py&quot;&gt;dither_rbg.py&lt;/a&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/File:Drosophila_melanogaster_-_side_(aka).jpg&quot;&gt;dmel_wiki.jpg&lt;/a&gt; &lt;a href=&quot;ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r5.52.fasta.gz&quot;&gt;dm3.fasta&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/dmel_wiki_bg_A0.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/dmel_wiki_bg_A0.png&quot; alt=&quot;dmel_wiki_bg_A0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/dmel_wiki_bg_A0.png&quot; alt=&quot;dmel_wiki_bg_A0&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I’ve resized this image so it is a reasonable size for my hosting limits. A side effect is that the individual characters are no longer visible and it looks more like the original image.  While this is a cool compression artifact, it loses the intent of the program. Here is a sample of the full size image: &lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/close_up_atcg.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/close_up_atcg.png&quot; alt=&quot;close_up_atcg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I’ve resized this image so it is a reasonable size for my hosting limits. A side effect is that the individual characters are no longer visible and it looks more like the original image.  While this is a cool compression artifact, it loses the intent of the program. Here is a sample of the full size image: &lt;img src=&quot;http://haplotypewriter.com/assets/close_up_atcg.png&quot; alt=&quot;close_up_atcg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While one fly is awesome, I enjoy the evolutionary perspective and using these fantastic &lt;a href=&quot;http://flybase.org/static_pages/anatomy/Drosophilidae/Drosophilidae.html&quot;&gt;illustrations&lt;/a&gt; by Mrs. Sarah L. Martin provided by FlyBase and this &lt;a href=&quot;http://bergmanlab.smith.man.ac.uk/?p=1612&quot;&gt;list&lt;/a&gt; of sequenced Drosophilids curated by Casey Bergman, I created pictures of all available fly genomes below.  Warning, these are rather large PDFs so don’t open in your browser.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_ananassae_A0.pdf&quot;&gt;Drosophila_ananassae_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_ananassae_A0.pdf&quot;&gt;Drosophila_ananassae_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_bipunctata_A0.pdf&quot;&gt;Drosophila_bipunctata_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_bipunctata_A0.pdf&quot;&gt;Drosophila_bipunctata_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_mojavensis_A0.pdf&quot;&gt;Drosophila_mojavensis_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_mojavensis_A0.pdf&quot;&gt;Drosophila_mojavensis_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_melanogaster_A0.pdf&quot;&gt;Drosophila_melanogaster_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_melanogaster_A0.pdf&quot;&gt;Drosophila_melanogaster_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_pseudoobscura_A0.pdf&quot;&gt;Drosophila_pseudoobscura_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_pseudoobscura_A0.pdf&quot;&gt;Drosophila_pseudoobscura_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_virilis_A0.pdf&quot;&gt;Drosophila_virilis_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_virilis_A0.pdf&quot;&gt;Drosophila_virilis_A0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2013/08/Drosophila_willistoni_A0.pdf&quot;&gt;Drosophila_willistoni_A0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haplotypewriter.com/assets/Drosophila_willistoni_A0.pdf&quot;&gt;Drosophila_willistoni_A0&lt;/a&gt;&lt;/p&gt;
 </description>  
       <pubDate>Tue, 27 Aug 2013 16:11:48 -0700</pubDate>  
               <link>http://haplotypewriter.com/2013/08/27/making-an-organism-out-of-a-genome-with-python/</link>  
