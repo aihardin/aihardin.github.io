@@ -6,8 +6,8 @@
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Mon, 18 Apr 2016 22:00:10 -0700</pubDate>  
-    <lastBuildDate>Mon, 18 Apr 2016 22:00:10 -0700</lastBuildDate>  
+    <pubDate>Mon, 18 Apr 2016 22:02:55 -0700</pubDate>  
+    <lastBuildDate>Mon, 18 Apr 2016 22:02:55 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
       
     <item>  
@@ -135,7 +135,7 @@ sra_con &amp;lt;- dbConnect(SQLite(),sqlfile)
 
 &lt;p&gt;The next person to process the sample was our extremely proficient technician who is normally beyond suspicion but is female along with the rest of the people who process the sample at our sequencing core.  They all fit the genetic profile so far which meant I needed to dig a bit deeper.  To do this I used the &lt;a href=&quot;http://www.hagsc.org/hgdp/&quot;&gt;Human Genetic Diversity Project&lt;/a&gt;, a collection of polymorphism collected from specific populations across the world.  Each population was genotyped at 600,000 positions and I looked at the polymorphisms in the contaminate to see which population it matched the best.  After I did this by hand, a great tool called &lt;a href=&quot;http://genome.sph.umich.edu/wiki/LASER&quot;&gt;LASER&lt;/a&gt; has been released to make this a one step analysis.  Plotting the Unknown along with the HGDP samples shows that it clusters nicely in the Central/South Asian group, ruling out our tech and maintaining her spotless record.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png&quot; alt=&quot;HGDP_pca-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/HGDP_pca-01.png&quot; alt=&quot;HGDP_pca-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I could show a whole lot more information about this person but won’t because I don’t know who it is and I don’t have consent.  I guess I could try to do a &lt;a href=&quot;http://strangervisions.com/&quot;&gt;facial reconstruction&lt;/a&gt;. I purposely did not look at any health related SNPs. I was even a bit worried that the ratio of X/Y/autosome could reveal something invasive like &lt;a href=&quot;http://en.wikipedia.org/wiki/Klinefelter_syndrome&quot;&gt;Klinefelter syndrome&lt;/a&gt;. At the end of the day, I really wouldn’t be able to say much about this person’s health risk but I can say quite about about her ancestry and so could anyone else who got their hands on a DNA sample.&lt;/p&gt;
 </description>  

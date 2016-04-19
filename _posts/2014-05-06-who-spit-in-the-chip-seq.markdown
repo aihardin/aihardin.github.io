@@ -36,7 +36,7 @@ The relative coverage of the X chromosome is with same range of the autosomes, s
 
 The next person to process the sample was our extremely proficient technician who is normally beyond suspicion but is female along with the rest of the people who process the sample at our sequencing core.  They all fit the genetic profile so far which meant I needed to dig a bit deeper.  To do this I used the [Human Genetic Diversity Project](http://www.hagsc.org/hgdp/), a collection of polymorphism collected from specific populations across the world.  Each population was genotyped at 600,000 positions and I looked at the polymorphisms in the contaminate to see which population it matched the best.  After I did this by hand, a great tool called [LASER](http://genome.sph.umich.edu/wiki/LASER) has been released to make this a one step analysis.  Plotting the Unknown along with the HGDP samples shows that it clusters nicely in the Central/South Asian group, ruling out our tech and maintaining her spotless record.
 
-[![HGDP_pca-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/05/HGDP_pca-01.png)
+![HGDP_pca-01]({{ site.url }}/assets/HGDP_pca-01.png)
 
 
 
