@@ -6,8 +6,8 @@
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Mon, 18 Apr 2016 22:51:34 -0700</pubDate>  
-    <lastBuildDate>Mon, 18 Apr 2016 22:51:34 -0700</lastBuildDate>  
+    <pubDate>Mon, 18 Apr 2016 22:56:55 -0700</pubDate>  
+    <lastBuildDate>Mon, 18 Apr 2016 22:56:55 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
       
     <item>  
@@ -164,53 +164,53 @@ sra_con &amp;lt;- dbConnect(SQLite(),sqlfile)
 
 &lt;p&gt;Let’s try a few observed differences: If the mutation rate for an organism with a 3 billion nucleotide genome is 2 mutations per 100 million bases per generation and there are zero differences between two individuals then they are clones.  If there are 60 differences between the genomes of two individuals then they must only be one generation apart.  If there are 120 differences, then they must be two generations apart.  There are a few models that fit this observation: there could be two serial generations apart, grandparent and grandchild, or two parallel generations, they share a common parent.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/mutations-01.png&quot; alt=&quot;mutations-01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/mutations-01.png&quot; alt=&quot;mutations-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Following some very basic assumptions we can measure how distantly related two individuals are just from counting the number of differences in their genomes.  The more differences, the more generations between them.  If we are sampling individuals from the same generation then we can rule out serial generations and know that we are measuring how long ago they shared a common ancestor. When the size of a population gets to be very very small, the amount of genetic diversity also becomes very small.  There are just less individuals to carry diversity to begin with.  We see this with crop species all the time and it becomes an important consideration when maintaining the genetic health of a population.  Cultivated bananas are clones and from the 1920s -60s, the primary strain &lt;a href=&quot;http://en.wikipedia.org/wiki/Gros_Michel&quot;&gt;http://en.wikipedia.org/wiki/Gros_Michel &lt;/a&gt;was wiped out by a fungus.  A population bottleneck will decrease the amount of diversity and leave a dramatic signature of the population that will persist for many many generations. This is one reason that the measurements that follow are of effective population size in terms of genetic diversity.  The actual number of individuals is going to be larger, usually much larger.&lt;/p&gt;
 
 &lt;p&gt;In 2011 Heng Li and Richard Durbin took a single human genome containing a chromosome from each parent and looked are all the places where there are differences between them.  Parts that have fewer differences had a common ancestor more recently than those with more differences.  By scanning across the genome and by noting that because of recombination, different parts of a genome have a different history, they found that the model of the past that best fit the observed data.  Of course, they tested the model with simulations and found that the method of a pairwise sequentially Markovian coalescent (PSMC) recovered the true simulated history.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png&quot; alt=&quot;psmc_simulation&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/psmc_simulation.png&quot; alt=&quot;psmc_simulation&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now looking at several sequenced humans and using this same method they confirmed  the out of Africa bottleneck of European and Asian populations.  In this plot, the present is on the left and goes into the past on the right. At no point does the human population go down to Noah, Wife, three daughter-in-laws (10 chromosomes).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png&quot; alt=&quot;humans&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/humans1.png&quot; alt=&quot;humans&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Maybe humans are weird and somehow misbehave in this model.  Let’s look at the crawling creatures and the birds of the air.  Many animals have been sequenced and if the population was reduced to two pairs (4 chromosomes) then maybe they will show this signature. The pig is the classic unclean animal and there should only have been two on board.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png&quot; alt=&quot;pig-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/pig-01.png&quot; alt=&quot;pig-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The lowest the effective pig population ever sank is around 250 individuals.  How about birds?  Here is the history of the falcons:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png&quot; alt=&quot;falcons-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/falcons-01.png&quot; alt=&quot;falcons-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nope, only went down to 1,500 ish.&lt;/p&gt;
 
 &lt;p&gt;The Chimps, Bonobos, Gorillas, and Orangutans that should have been on the Ark:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png&quot; alt=&quot;chimps-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/chimps-01.png&quot; alt=&quot;chimps-01&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png&quot; alt=&quot;gorillas-01&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png&quot; alt=&quot;ourangutangs-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/gorillas-01.png&quot; alt=&quot;gorillas-01&quot; /&gt; &lt;img src=&quot;http://haplotypewriter.com/assets/ourangutangs-01.png&quot; alt=&quot;ourangutangs-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Other primates:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png&quot; alt=&quot;tibet_macaque-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/tibet_macaque-01.png&quot; alt=&quot;tibet_macaque-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Man’s best friend et al:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png&quot; alt=&quot;canids&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/canids.png&quot; alt=&quot;canids&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The Panda (hope Noah had enough of the single species of bamboo they ate):&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png&quot; alt=&quot;pandas-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/pandas-01.png&quot; alt=&quot;pandas-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lions and Tigers:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png&quot; alt=&quot;lions_and_tigers-01&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/lions_and_tigers-011.png&quot; alt=&quot;lions_and_tigers-01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;How about the reptiles:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png&quot;&gt;&lt;img src=&quot;http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png&quot; alt=&quot;alligator&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://haplotypewriter.com/assets/alligator.png&quot; alt=&quot;alligator&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Not a single species underwent a severe bottleneck 5-10 thousand years ago.  Even if the dates were wrong, all these species did not experience a bottleneck at the same time. If the tale of Noah’s Ark were true, it should be etched in the genomes of the animals on the boat and it isn’t.&lt;/p&gt;
 

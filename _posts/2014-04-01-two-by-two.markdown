@@ -19,53 +19,53 @@ What makes up the mass of a tree? Everyone learns about photosynthesis multiple 
 
 Let's try a few observed differences: If the mutation rate for an organism with a 3 billion nucleotide genome is 2 mutations per 100 million bases per generation and there are zero differences between two individuals then they are clones.  If there are 60 differences between the genomes of two individuals then they must only be one generation apart.  If there are 120 differences, then they must be two generations apart.  There are a few models that fit this observation: there could be two serial generations apart, grandparent and grandchild, or two parallel generations, they share a common parent.
 
-![mutations-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/mutations-01.png)
+![mutations-01]({{ site.url }}/assets/mutations-01.png)
 
 Following some very basic assumptions we can measure how distantly related two individuals are just from counting the number of differences in their genomes.  The more differences, the more generations between them.  If we are sampling individuals from the same generation then we can rule out serial generations and know that we are measuring how long ago they shared a common ancestor. When the size of a population gets to be very very small, the amount of genetic diversity also becomes very small.  There are just less individuals to carry diversity to begin with.  We see this with crop species all the time and it becomes an important consideration when maintaining the genetic health of a population.  Cultivated bananas are clones and from the 1920s -60s, the primary strain [http://en.wikipedia.org/wiki/Gros_Michel ](http://en.wikipedia.org/wiki/Gros_Michel)was wiped out by a fungus.  A population bottleneck will decrease the amount of diversity and leave a dramatic signature of the population that will persist for many many generations. This is one reason that the measurements that follow are of effective population size in terms of genetic diversity.  The actual number of individuals is going to be larger, usually much larger.
 
 In 2011 Heng Li and Richard Durbin took a single human genome containing a chromosome from each parent and looked are all the places where there are differences between them.  Parts that have fewer differences had a common ancestor more recently than those with more differences.  By scanning across the genome and by noting that because of recombination, different parts of a genome have a different history, they found that the model of the past that best fit the observed data.  Of course, they tested the model with simulations and found that the method of a pairwise sequentially Markovian coalescent (PSMC) recovered the true simulated history.
 
-[![psmc_simulation](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/psmc_simulation.png)
+![psmc_simulation]({{ site.url }}/assets/psmc_simulation.png)
 
 Now looking at several sequenced humans and using this same method they confirmed  the out of Africa bottleneck of European and Asian populations.  In this plot, the present is on the left and goes into the past on the right. At no point does the human population go down to Noah, Wife, three daughter-in-laws (10 chromosomes).
 
-[![humans](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/humans1.png)
+![humans]({{ site.url }}/assets/humans1.png)
 
 Maybe humans are weird and somehow misbehave in this model.  Let's look at the crawling creatures and the birds of the air.  Many animals have been sequenced and if the population was reduced to two pairs (4 chromosomes) then maybe they will show this signature. The pig is the classic unclean animal and there should only have been two on board.
 
-[![pig-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pig-01.png)
+![pig-01]({{ site.url }}/assets/pig-01.png)
 
 The lowest the effective pig population ever sank is around 250 individuals.  How about birds?  Here is the history of the falcons:
 
-[![falcons-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/falcons-01.png)
+![falcons-01]({{ site.url }}/assets/falcons-01.png)
 
 Nope, only went down to 1,500 ish.
 
 The Chimps, Bonobos, Gorillas, and Orangutans that should have been on the Ark:
 
-[![chimps-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/chimps-01.png)
+![chimps-01]({{ site.url }}/assets/chimps-01.png)
 
-[![gorillas-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/gorillas-01.png) [![ourangutangs-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/ourangutangs-01.png)
+![gorillas-01]({{ site.url }}/assets/gorillas-01.png) ![ourangutangs-01]({{ site.url }}/assets/ourangutangs-01.png)
 
 Other primates:
 
-[![tibet_macaque-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/tibet_macaque-01.png)
+![tibet_macaque-01]({{ site.url }}/assets/tibet_macaque-01.png)
 
 Man's best friend et al:
 
-[![canids](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/canids.png)
+![canids]({{ site.url }}/assets/canids.png)
 
 The Panda (hope Noah had enough of the single species of bamboo they ate):
 
-[![pandas-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/pandas-01.png)
+![pandas-01]({{ site.url }}/assets/pandas-01.png)
 
 Lions and Tigers:
 
-[![lions_and_tigers-01](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/lions_and_tigers-011.png)
+![lions_and_tigers-01]({{ site.url }}/assets/lions_and_tigers-011.png)
 
 How about the reptiles:
 
-[![alligator](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png)](http://www.haplotypewriter.com/blog/wp-content/uploads/2014/03/alligator.png)
+![alligator]({{ site.url }}/assets/alligator.png)
 
 Not a single species underwent a severe bottleneck 5-10 thousand years ago.  Even if the dates were wrong, all these species did not experience a bottleneck at the same time. If the tale of Noah's Ark were true, it should be etched in the genomes of the animals on the boat and it isn't.
 
