@@ -34,7 +34,7 @@ Once you have put the embryos into the full tray of bottles, plug them up, move 
 
 It is hard to estimate the correct amount of embryos to put in each bottle.  Too many and the larvae will be stressed, develop slower, and churn up the media so that it is goopy.  Goopy bottles are really hard to tap the adults out of so don't do that.  On the other side, underpopulated bottles waste bottles since you need more of them.  One tray of full but not too full bottles will yield around 50 ml of adult flies.
 
-![ready_bottle]({{ site.url }}/assets/ready_bottle-300x225.jpg)![dense_bottle]({{ site.url }}/assets/dense_bottle.JPG)![sparse_bottle]({{ site.url }}/assets/sparse_bottle.JPG)
+![ready_bottle]({{ site.url }}/assets/ready_bottle.JPG)![dense_bottle]({{ site.url }}/assets/dense_bottle.JPG)![sparse_bottle]({{ site.url }}/assets/sparse_bottle.JPG)
 
 To collect the adult flies, I use a 200 ml flask and place it in an ice bucket with a bit of ice.  I don't pack the ice around the flack, it can be loose.  The ice will keep the flies from trying to escape.  Place a large funnel in the flask and tap each bottle into the flask. Be gentle with the flies in the flask and don't shake them too much as you tap.
 
