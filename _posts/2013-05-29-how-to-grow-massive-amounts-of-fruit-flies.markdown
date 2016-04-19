@@ -18,7 +18,7 @@ As we perpetuate the fruit fly circle of life, we need to start somewhere and I'
 
 From here there are two ways to proceed: put the embryos in a box with yeast paste or put the embryos in bottles with banana paste and yeast.  My fly strains didn't do so well in the box so I'm going to show the bottle method.
 
-[![collected_embryos]({{ site.url }}/assets/collected_embryos.JPG)]
+![collected_embryos]({{ site.url }}/assets/collected_embryos.JPG)
 
 To get an optimum number of flies in the next generation, around 120-150ml, you will need between 3-5 large trays of bottles with 40 bottles per tray.  In each bottle tap a small amount of yeast.
 
@@ -26,7 +26,7 @@ To get an optimum number of flies in the next generation, around 120-150ml, you 
 
 Now using a nickel spatula, scrape up a pile of embryos no bigger than a grain of rice.  Not those basmati rice grains, more like jasmine rice.  Half of a fat sushi rice gain. I like to tap the yeast onto one side and the embryos onto the other so that the yeast doesn't dehydrate the embryos.  I don't know if that would really happen but it also helps to find the embryo pile when it isn't blending into the yeast.
 
-[![seeded_bottles]({{ site.url }}/assets/seeded_bottles.JPG)](![mound_of_eggs]({{ site.url }}/assets/mound_of_eggs.JPG)
+![seeded_bottles]({{ site.url }}/assets/seeded_bottles.JPG)(![mound_of_eggs]({{ site.url }}/assets/mound_of_eggs.JPG)
 
 Once you have put the embryos into the full tray of bottles, plug them up, move to your incubator, and wait around 8-10 days.
 
