@@ -6,8 +6,8 @@
 </description>  
     <link>http://haplotypewriter.com/</link>  
     <atom:link href="http://haplotypewriter.com/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>Tue, 19 Apr 2016 13:21:51 -0700</pubDate>  
-    <lastBuildDate>Tue, 19 Apr 2016 13:21:51 -0700</lastBuildDate>  
+    <pubDate>Tue, 19 Apr 2016 13:33:05 -0700</pubDate>  
+    <lastBuildDate>Tue, 19 Apr 2016 13:33:05 -0700</lastBuildDate>  
     <generator>Jekyll v2.4.0</generator>  
       
     <item>  
@@ -344,9 +344,9 @@ out_fh.write(&#39;var low_freq = [&#39;+&#39;,&#39;.join(map(str,mut_counts[1][-
 out_fh.close()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven’t used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:&lt;/p&gt;
-
-&lt;p&gt;We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I’m sure that with more genome sequences the &lt;em&gt;D. melanogaster&lt;/em&gt; plot will look more like the &lt;em&gt;H. sapiens&lt;/em&gt;. Other projects are in the works to describe genetic variation in other model organisms such as the plant &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Arabidopsis_thaliana&quot;&gt;Arabidopsis thaliana&lt;/a&gt;&lt;/em&gt; and the worm &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Caenorhabditis_elegans&quot;&gt;Caenorhabditis elegans&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven’t used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
+&amp;lt;iframe style=&quot;border: 0px;&quot; src=&quot;/plots/iceberg.html&quot; height=&quot;400&quot; width=&quot;800&quot; scrolling=&quot;no&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I’m sure that with more genome sequences the &lt;em&gt;D. melanogaster&lt;/em&gt; plot will look more like the &lt;em&gt;H. sapiens&lt;/em&gt;. Other projects are in the works to describe genetic variation in other model organisms such as the plant &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Arabidopsis_thaliana&quot;&gt;Arabidopsis thaliana&lt;/a&gt;&lt;/em&gt; and the worm &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Caenorhabditis_elegans&quot;&gt;Caenorhabditis elegans&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;In working through coding and presenting the D3, I leaned heavily on the D3 tutorial by &lt;a href=&quot;http://alignedleft.com/tutorials/d3/&quot;&gt;Scott Murray&lt;/a&gt; and the tips of &lt;a href=&quot;http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/&quot;&gt;Charles Reid&lt;/a&gt;.&lt;/p&gt;
 </description>  

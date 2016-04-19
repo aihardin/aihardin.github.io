@@ -210,9 +210,9 @@ out_fh.write('var low_freq = ['+','.join(map(str,mut_counts[1][-200:]))+']\n')
 out_fh.close()
 </code></pre>
 
-<p>Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven’t used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:</p>
-
-<p>We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I’m sure that with more genome sequences the <em>D. melanogaster</em> plot will look more like the <em>H. sapiens</em>. Other projects are in the works to describe genetic variation in other model organisms such as the plant <em><a href="http://en.wikipedia.org/wiki/Arabidopsis_thaliana">Arabidopsis thaliana</a></em> and the worm <em><a href="http://en.wikipedia.org/wiki/Caenorhabditis_elegans">Caenorhabditis elegans</a></em>.</p>
+<p>Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven’t used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
+&lt;iframe style="border: 0px;" src="/plots/iceberg.html" height="400" width="800" scrolling="no"&gt;&lt;/iframe&gt;
+We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I’m sure that with more genome sequences the <em>D. melanogaster</em> plot will look more like the <em>H. sapiens</em>. Other projects are in the works to describe genetic variation in other model organisms such as the plant <em><a href="http://en.wikipedia.org/wiki/Arabidopsis_thaliana">Arabidopsis thaliana</a></em> and the worm <em><a href="http://en.wikipedia.org/wiki/Caenorhabditis_elegans">Caenorhabditis elegans</a></em>.</p>
 
 <p>In working through coding and presenting the D3, I leaned heavily on the D3 tutorial by <a href="http://alignedleft.com/tutorials/d3/">Scott Murray</a> and the tips of <a href="http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/">Charles Reid</a>.</p>
 

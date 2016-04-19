@@ -81,7 +81,7 @@ And some more to process the GFF and get counts:
 
 
 Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven't used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
-
+<iframe style="border: 0px;" src="{{ "/plots/iceberg.html" | prepend: site.baseurl }}" height="400" width="800" scrolling="no"></iframe>
 We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I'm sure that with more genome sequences the _D. melanogaster_ plot will look more like the _H. sapiens_. Other projects are in the works to describe genetic variation in other model organisms such as the plant _[Arabidopsis thaliana](http://en.wikipedia.org/wiki/Arabidopsis_thaliana)_ and the worm _[Caenorhabditis elegans](http://en.wikipedia.org/wiki/Caenorhabditis_elegans)_.
 
 In working through coding and presenting the D3, I leaned heavily on the D3 tutorial by [Scott Murray](http://alignedleft.com/tutorials/d3/) and the tips of [Charles Reid](http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/).
