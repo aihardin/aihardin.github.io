@@ -25,7 +25,7 @@ One example of a modern human study that supasses anything done in flies is the 
 
 Using exon capture methods followed by high throughput sequencing, the Novembre lab were able to find alleles that were present at frequencies as low as 0.007%.  I attended a presentation Novembre gave about this work and he described Fig 1B as an "iceberg plot" meaning that the previous studies only saw the tip of human genetic variation.
 
-[caption id="" align="alignleft" width="1491"]![](http://newsroom.ucla.edu/portal/ucla/artwork/3/4/0/7/4/234074/John_Novembre_2012_iceberg_image.jpg) The human genetic variation iceberg. Variants that could be found in samples with up to 200 individuals shown on top and everything else below.[/caption]
+![](http://newsroom.ucla.edu/portal/ucla/artwork/3/4/0/7/4/234074/John_Novembre_2012_iceberg_image.jpg) The human genetic variation iceberg. Variants that could be found in samples with up to 200 individuals shown on top and everything else below.
 
 The rest of their analysis goes on the show that the rarest of variants are more likely to be damaging and that the iceberg goes down even farther than this, particularly in the African populations.
 
@@ -82,6 +82,6 @@ And some more to process the GFF and get counts:
 
 Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven't used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
 
-We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I'm sure that with more genome sequences the_ D. melanogaster_ plot will look more like the _H. sapiens_. Other projects are in the works to describe genetic variation in other model organisms such as the plant _[Arabidopsis thaliana](http://en.wikipedia.org/wiki/Arabidopsis_thaliana)_ and the worm _[Caenorhabditis elegans](http://en.wikipedia.org/wiki/Caenorhabditis_elegans)_.
+We see with 325 genomes the hints of an iceberg! Variants seen at a frequency of less than 0.05% in this dataset means the singletons, the variants seen in only one of the genomes. I'm sure that with more genome sequences the _D. melanogaster_ plot will look more like the _H. sapiens_. Other projects are in the works to describe genetic variation in other model organisms such as the plant _[Arabidopsis thaliana](http://en.wikipedia.org/wiki/Arabidopsis_thaliana)_ and the worm _[Caenorhabditis elegans](http://en.wikipedia.org/wiki/Caenorhabditis_elegans)_.
 
 In working through coding and presenting the D3, I leaned heavily on the D3 tutorial by [Scott Murray](http://alignedleft.com/tutorials/d3/) and the tips of [Charles Reid](http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/).
