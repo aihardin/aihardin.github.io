@@ -61,7 +61,7 @@ The Panda (hope Noah had enough of the single species of bamboo they ate):
 
 Lions and Tigers:
 
-![lions_and_tigers-01]({{ site.url }}/assets/lions_and_tigers-011.png)
+![lions_and_tigers-01]({{ site.url }}/assets/lions_and_tigers-01.png)
 
 How about the reptiles:
 
