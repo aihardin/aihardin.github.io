@@ -55,7 +55,7 @@ A bit of python to turn the bedtools outputs into a proper GFF file:
 
 And some more to process the GFF and get counts:
 
-    
+```python
     input_bed = file('all_gene_mut_counts.bed')
     exons = {}
     for line in input_bed:
@@ -78,7 +78,7 @@ And some more to process the GFF and get counts:
     out_fh.write('var high_freq = ['+','.join(map(str,mut_counts[0][-200:]))+']\n')
     out_fh.write('var low_freq = ['+','.join(map(str,mut_counts[1][-200:]))+']\n')
     out_fh.close()
-
+```
 
 Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven't used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
 <iframe style="border: 0px;" src="{{ "/plots/iceberg.html" | prepend: site.baseurl }}" height="400" width="800" scrolling="no"></iframe>
