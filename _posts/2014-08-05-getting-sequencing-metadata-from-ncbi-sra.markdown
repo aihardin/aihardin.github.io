@@ -37,7 +37,9 @@ sra_con <- dbConnect(SQLite(),sqlfile)
 ```
 
 We can get information about each run by looking in the run table:
-[code language="r"]run <- dbGetQuery(sra_con, "select * from run where run_accession = 'SRR1029856’")[/code]
+```R
+run <- dbGetQuery(sra_con, "select * from run where run_accession = 'SRR1029856'")
+```
 
 [table id=1 /]
 
@@ -46,7 +48,7 @@ This doesn’t tell us very much but it does contain the crucial field that lets
 Using this information, we can look in the experiment table with:
 
 ```R
-exp <- dbGetQuery(sra_con, "select * from experiment where experiment_accession = 'SRX377662’")
+exp <- dbGetQuery(sra_con, "select * from experiment where experiment_accession = 'SRX377662'")
 ```
 
 [table id=2 /]
@@ -56,7 +58,7 @@ This has the title info which we need to make sense of the data: what tissue and
 Now we can use the power of SQL and get all the data at once by joining the run and experiment tables and only getting the rows that match the study ID.
 
 ```R
-runs <- dbGetQuery(sra_con, "select run_accession, title from run JOIN experiment USING (experiment_accession) where experiment.study_accession = 'SRP033009’”)
+runs <- dbGetQuery(sra_con, "select run_accession, title from run JOIN experiment USING (experiment_accession) where experiment.study_accession = 'SRP033009'")
 ```
 
 [table id=3 /]
