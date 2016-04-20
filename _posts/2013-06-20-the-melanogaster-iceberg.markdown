@@ -39,45 +39,45 @@ Method: align all raw sequence data to the reference genome with BWA/Stampy.  R
 
 A bit of python to turn the bedtools outputs into a proper GFF file:
 
-    
-    low_fh = file('all_lowfreq_gene_counts.bed')
-    high_fh = file('all_highfreq_gene_counts.bed')
-    out_fh = file('all_gene_mut_counts.bed','w')
-    out_fh.write('##gff-version 3\n')
-    for line in high_fh:
-        low_counts = low_fh.readline().strip().split('\t')[-1]
-        exon_data = line.strip().split('\t')[:-1]
-        high_counts = line.strip().split('\t')[-1]
-        exon_data[-1] = exon_data[-1]+';high_count=%s;low_count=%s'%(high_counts,low_counts)
-        out_fh.write('\t'.join(exon_data)+'\n')
-    out_fh.close()
-
+```python    
+low_fh = file('all_lowfreq_gene_counts.bed')
+high_fh = file('all_highfreq_gene_counts.bed')
+out_fh = file('all_gene_mut_counts.bed','w')
+out_fh.write('##gff-version 3\n')
+for line in high_fh:
+    low_counts = low_fh.readline().strip().split('\t')[-1]
+    exon_data = line.strip().split('\t')[:-1]
+    high_counts = line.strip().split('\t')[-1]
+    exon_data[-1] = exon_data[-1]+';high_count=%s;low_count=%s'%(high_counts,low_counts)
+    out_fh.write('\t'.join(exon_data)+'\n')
+out_fh.close()
+```
 
 And some more to process the GFF and get counts:
 
 ```python
-    input_bed = file('all_gene_mut_counts.bed')
-    exons = {}
-    for line in input_bed:
-        if line.startswith('##'): continue
-        try:
-            annotation = line.rstrip().split('\t')[-1].split(';')
-            annotation = dict([tuple(a.split('=')) for a in annotation if '=' in a]) #skips the flag values but don't need them
-        except ValueError:
-            print line, annotation
-    #print annotation
-    exons[annotation['ID']] = (int(annotation['high_count']),int(annotation['low_count']))
-    mut_counts = zeros((3,len(exons)))
-    
-    for i,exon in enumerate(exons):
-        mut_counts[0][i] = exons[exon][0]
-        mut_counts[1][i] = exons[exon][1]
-    mut_counts[2]=mut_counts[0]+mut_counts[1]
-    mut_counts.sort(axis=1)
-    out_fh = file('data.js','w')
-    out_fh.write('var high_freq = ['+','.join(map(str,mut_counts[0][-200:]))+']\n')
-    out_fh.write('var low_freq = ['+','.join(map(str,mut_counts[1][-200:]))+']\n')
-    out_fh.close()
+input_bed = file('all_gene_mut_counts.bed')
+exons = {}
+for line in input_bed:
+    if line.startswith('##'): continue
+    try:
+        annotation = line.rstrip().split('\t')[-1].split(';')
+        annotation = dict([tuple(a.split('=')) for a in annotation if '=' in a]) #skips the flag values but don't need them
+    except ValueError:
+        print line, annotation
+#print annotation
+exons[annotation['ID']] = (int(annotation['high_count']),int(annotation['low_count']))
+mut_counts = zeros((3,len(exons)))
+
+for i,exon in enumerate(exons):
+    mut_counts[0][i] = exons[exon][0]
+    mut_counts[1][i] = exons[exon][1]
+mut_counts[2]=mut_counts[0]+mut_counts[1]
+mut_counts.sort(axis=1)
+out_fh = file('data.js','w')
+out_fh.write('var high_freq = ['+','.join(map(str,mut_counts[0][-200:]))+']\n')
+out_fh.write('var low_freq = ['+','.join(map(str,mut_counts[1][-200:]))+']\n')
+out_fh.close()
 ```
 
 Now I have the top 200 genes with the most segregating sites in them, sorted from least to most.  To replicate the broad strokes of the iceberg plot, I wanted to use D3 and generate SVG files. I haven't used javascript ever and it has been 8 years since I coded HTML so it took a bit but I managed to make some bar graphs:
