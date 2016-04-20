@@ -37,6 +37,7 @@ sra_con <- dbConnect(SQLite(),sqlfile)
 ```
 
 We can get information about each run by looking in the run table:
+
 ```R
 run <- dbGetQuery(sra_con, "select * from run where run_accession = 'SRR1029856'")
 ```
