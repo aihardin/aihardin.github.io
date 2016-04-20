@@ -42,7 +42,9 @@ We can get information about each run by looking in the run table:
 run <- dbGetQuery(sra_con, "select * from run where run_accession = 'SRR1029856'")
 ```
 
-[table id=1 /]
+| RUN_ID | BAMFILE | RUN_ALIAS     | RUN_ACCESSION | BROKER_NAME | INSTRUMENT_NAME | RUN_DATE      | RUN_FILE | RUN_CENTER | TOTAL_DATA_BLOCKS | EXPERIMENT_ACCESSION | EXPERIMENT_NAME | SRA_LINK | RUN_URL_LINK | XREF_LINK | RUN_ENTREZ_LINK | DDBJ_LINK | ENA_LINK | RUN_ATTRIBUTE | SUBMISSION_ACCESSION | SRADB_UPDATED |
+|--------|---------|---------------|---------------|-------------|-----------------|---------------|----------|------------|-------------------|----------------------|-----------------|----------|--------------|-----------|-----------------|-----------|----------|---------------|----------------------|---------------|
+| 611310 | NA      | GSM1264352_r1 | SRR1029856    | NA          | NA              | 11/14/13 0:00 | NA       | GEO        | NA                | SRX377662            | GSM1264352      | NA       | NA           | NA        | NA              | NA        | NA       | NA            | SRA111212            | 6/10/14 12:20 |
 
 This doesn’t tell us very much but it does contain the crucial field that lets us know what experiment it came from: SRX377662.
 
