@@ -28,13 +28,13 @@ To get the metadata for a study we can use the R package [SRAdb](http://www.bioc
 
 Set up by installing SRAdb with Bioconductor and downloading the SRA metainfo database.  This is a large file > 7 GB so keep this in mind for download times and space on your computer.
 
-[code language="r"]
+```R
 source("http://bioconductor.org/biocLite.R")
 biocLite("SRAdb")
 library(SRAdb)
 sqlfile <- getSRAdbFile()
 sra_con <- dbConnect(SQLite(),sqlfile)
-[/code]
+```
 
 We can get information about each run by looking in the run table:
 [code language="r"]run <- dbGetQuery(sra_con, "select * from run where run_accession = 'SRR1029856’")[/code]
@@ -45,7 +45,9 @@ This doesn’t tell us very much but it does contain the crucial field that lets
 
 Using this information, we can look in the experiment table with:
 
-[code language="r"]exp <- dbGetQuery(sra_con, "select * from experiment where experiment_accession = 'SRX377662’")[/code]
+```R
+exp <- dbGetQuery(sra_con, "select * from experiment where experiment_accession = 'SRX377662’")
+```
 
 [table id=2 /]
 
@@ -53,6 +55,8 @@ This has the title info which we need to make sense of the data: what tissue and
 
 Now we can use the power of SQL and get all the data at once by joining the run and experiment tables and only getting the rows that match the study ID.
 
-[code language="r"]runs <- dbGetQuery(sra_con, "select run_accession, title from run JOIN experiment USING (experiment_accession) where experiment.study_accession = 'SRP033009’”)[/code]
+```R
+runs <- dbGetQuery(sra_con, "select run_accession, title from run JOIN experiment USING (experiment_accession) where experiment.study_accession = 'SRP033009’”)
+```
 
 [table id=3 /]
